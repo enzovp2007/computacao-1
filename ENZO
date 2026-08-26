@@ -1,0 +1,46 @@
+/* Escreva um programa em Delégua que leia 3 vezes os seguintes valores:
+
+Nome da pessoa (texto)
+Ano de nascimento (inteiro)
+Salário (real)
+Usa óculos (lógico)
+
+
+Para Cada conjunto de respostas escreva respostas como: Nome tem "x" anos e Ganha "x" Reais e "usa ou não " Oculos
+
+*/ 
+// definições de variáveis 
+var nome: texto 
+var ano_de_nascimento: inteiro
+var salário: real 
+var usa_oculos: lógico = falso
+var idade: inteiro 
+
+var respostaoculos: texto 
+var respostanome: texto
+var respostaano: texto 
+var respostasalário: texto 
+
+
+nome = leia("Qual Seu nome:")
+ano = 2026 
+ano_de_nascimento = inteiro( leia("Quando você nasceu?")) 
+idade = (ano-ano_de_nascimento)
+salário = real(leia("Quanto você ganha de salário?"))
+
+respostaoculos = leia("Você usa óculos? Responda V ou F")
+
+escreva("Olá " + ${nome} + ", você tem" $) 
+escreva(ano_de_nascimento)
+escreva(salário) 
+escreva(respostaoculos)
+
+se (respostaoculos=='V'){
+   usa_oculos = verdadeiro
+} 
+
+se (usa_oculos) {
+    escreva('usa oculos');
+} senao {
+    escreva('não usa óculos!');
+}
