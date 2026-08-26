@@ -1,26 +1,23 @@
 // Definição de variações
-var nome: texto 
+var nome: texto
 var ano_de_nascimento: inteiro
-var salário: real 
+var salário: real
 var usa_oculos: lógico = falso
-var idade: inteiro 
-const ano = 2026
+var idade: inteiro
+constante ano = 2026
 var respostaoculos: texto
-
-//Análise e coleta de dados do usuário 
-para var i = 1; i < 4; i = i + 1 { 
-nome = leia("Qual Seu nome:")
-ano_de_nascimento = inteiro( leia("Quando você nasceu?")) 
-idade = (ano-ano_de_nascimento)
-salário = real(leia("Quanto você ganha de salário?"))
-respostaoculos = leia("Você usa óculos? Responda V ou F")
-
-//Resultado 
-se (respostaoculos=='V'){
-   usa_oculos = verdadeiro
-    escreva("Olá ${nome}, você tem ${idade} anos, ganha ${salário} reais e usa óculos");
-}
- senao {
-   escreva("Olá ${nome}, você tem ${idade} anos, ganha ${salário} reais e não usa óculos");
-} 
+// Análise e coleta de dados do usuário
+para var i = 1; i < 4; i = i + 1 {
+    nome = leia("Qual Seu nome:")
+    ano_de_nascimento = inteiro(leia("Quando você nasceu?"))
+    idade = (ano - ano_de_nascimento)
+    salário = real(leia("Quanto você ganha de salário?"))
+    respostaoculos = leia("Você usa óculos? Responda V ou F")
+    // Resultado
+    se (respostaoculos == 'V') {
+        usa_oculos = verdadeiro
+        escreva("Olá ${nome}, você tem ${idade} anos, ganha ${salário} reais e usa óculos")
+    } senão {
+        escreva("Olá ${nome}, você tem ${idade} anos, ganha ${salário} reais e não usa óculos")
+    }
 }
