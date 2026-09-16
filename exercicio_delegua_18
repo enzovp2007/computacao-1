@@ -1,0 +1,21 @@
+var nomes = []
+var media_aluno = []
+var media_da_turma: real = 0
+var quantidade_de_alunos: inteiro
+quantidade_de_alunos = inteiro(leia("Digite a quantidade de estudantes"))
+se (quantidade_de_alunos <= 0) {
+    escreva('Encerrando o programa...')
+} senão {
+    para (var i = 1; i <= quantidade_de_alunos; i = i + 1) {
+        nomes.adicionar(leia("Digite o nome do(a) estudante"))
+        media_aluno.adicionar(inteiro(leia("Digite a média do(a) estudante")))
+        media_da_turma = media_da_turma + media_aluno[i - 1] / quantidade_de_alunos
+    }
+    escreva("A média da turma foi ${media_da_turma}")
+    para (var i = 1; i <= quantidade_de_alunos; i = i + 1) {
+        escreva("(${nomes[i-1]}) teve média ${media_aluno[i-1]}")
+        se (media_aluno[i - 1] >= 0.9 * media_da_turma) {
+            escreva("${nomes[i-1]} teve média acima da média da turma")
+        }
+    }
+}
