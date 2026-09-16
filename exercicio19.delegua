@@ -1,0 +1,30 @@
+var nomes = []
+var nota1 = []
+var nota2 = []
+var media_aluno = []
+var media_da_turma: real
+var quantidade_de_alunos: inteiro = 0
+enquanto (quantidade_de_alunos <= 0) {
+    quantidade_de_alunos = inteiro(leia("Digite a quantidade de estudantes"))
+}
+se (quantidade_de_alunos <= 0) {
+    escreva('Encerrando o programa...')
+} senão {
+    para (var i = 1; i <= quantidade_de_alunos; i = i + 1) {
+        nomes.adicionar(leia("Digite o nome do(a) estudante"))
+        nota1.adicionar(inteiro(leia("Digite a nota da primeira prova do(a) estudante")))
+        nota2.adicionar(inteiro(leia("Digite a nota da segunda prova do(a) estudante")))
+        media_aluno[i - 1] = (nota1[i - 1] * 3 + nota2[i - 1] * 4) / 7
+        media_da_turma = media_da_turma + media_aluno[i - 1]
+    }
+    media_da_turma = media_da_turma / quantidade_de_alunos
+    escreva("A média da turma foi ${media_da_turma}")
+    para (var i = 1; i <= quantidade_de_alunos; i = i + 1) {
+        escreva("(${nomes[i-1]}) teve média ${media_aluno[i-1]}")
+        se (media_aluno[i - 1] < 5 ou media_aluno[i - 1] < media_da_turma) {
+            escreva("${nomes[i-1]} está Reprovado")
+        } senão {
+            escreva('${nomes[i-1]} está Aprovado')
+        }
+    }
+}
