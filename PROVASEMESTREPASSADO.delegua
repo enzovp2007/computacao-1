@@ -1,0 +1,56 @@
+//Meu nome é Enzo Horacio Viana Pinheiro. Então com base nisso:  
+//Exercício 1: 
+var cintura = real(leia("Digite a medida da cintura (em metros): "))
+var altura = real(leia("Digite a altura (em metros): "))
+var sapato = inteiro(leia("Digite o número do sapato: "))
+// não consegui arrumar com 1,90 apenas 1.90. Ele não entende o numero com , e apenas ponto. 
+
+var indiceA = cintura * (sapato - (altura * 10))
+var indiceB = (sapato + altura * 10) - (cintura * 10)
+
+se (indiceA > indiceB) {
+    escreva("indiceA é maior do que indiceB")
+} senao se (indiceA < indiceB) {
+    escreva("indiceA é menor do que indiceB")
+} senao {
+    escreva("indiceA e indiceB são iguais")
+}
+
+/* DELETE ESSA LINHA para rodar o programa do exercicio 2. 
+// Exercício 2: 
+const N = 6
+var i = 0
+var soma_medias = 0
+var acertou = falso
+// aqui utilizei  
+// Parte 1: leitura das notas e cálculo das médias ponderadas
+enquanto (i < N) {
+    escreva("GRUPO DE NOTAS " + texto(i + 1) + " de " + texto(N))
+
+    var nota1 = real(leia("Digite a nota da prova 1: "))
+    var nota2 = real(leia("Digite a nota da prova 2: "))
+    var nota3 = real(leia("Digite a nota da prova 3: "))
+
+    var media_ponderada = (nota1 * 4 + nota2 * 6 + nota3 * 3) / 13
+
+    escreva("Média ponderada: " + texto(media_ponderada))
+
+    soma_medias = soma_medias + media_ponderada
+    i = i + 1
+}
+
+var media_das_medias = soma_medias / N
+
+// Parte 2: loop indeterminado
+enquanto (acertou == falso) {
+    var chute = real(leia("Qual é o valor da média das médias? "))
+
+    se (chute == media_das_medias) {
+        escreva("Parabéns, você é uma pessoa de extrema sorte!")
+        acertou = verdadeiro
+    } senao se (chute < media_das_medias) {
+        escreva("Valor demais de baixo!")
+    } senao {
+        escreva("Valor demais de alto!")
+    }
+}
